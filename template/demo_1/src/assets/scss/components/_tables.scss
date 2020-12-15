@@ -1,0 +1,209 @@
+/* Tables */
+
+.table {
+  margin-bottom: 0;
+  thead {
+    th {
+      border-top: 0;
+      border-bottom-width: 1px;
+      font-family: $type1-medium;
+      font-weight: initial;
+      i {
+        margin-left: 0.325rem;
+      }
+    }
+  }
+  th,
+  td {
+    vertical-align: middle;
+    font-size: $default-font-size;
+    line-height: 1;
+    white-space: nowrap;
+    img {
+      width: 36px;
+      height: 36px;
+      border-radius: 100%;
+    }
+    .badge {
+      margin-bottom: 0;
+    }
+  }
+  &.table-borderless{
+    border: none;
+    tr,td,th{
+      border: none;
+    }
+  }
+}
+/* Table */
+
+.table {
+  &.b-table {
+    > thead {
+      > tr {
+        th {
+          position: relative;
+          &:focus {
+            outline: none;
+            box-shadow: none;
+          }
+        }
+        > [aria-sort="none"] {
+          background: transparent;
+          &:before {
+            content: "\F05D";
+            position: absolute;
+            right: 1em;
+            top: 10px;
+            display: inline-block;
+            line-height: 2.5;
+            font-family: Material Design Icons;
+            font-size: 0.65rem;
+          }
+          &:after {
+            content: "\F045";
+            position: absolute;
+            top: 10px;
+            right: 0;
+            display: inline-block;
+            line-height: 2.5;
+            font-family: Material Design Icons;
+            font-size: 0.65rem;
+          }
+        }
+
+        > [aria-sort="ascending"] {
+          background: transparent;
+          &:before {
+            content: "\F05D";
+            position: absolute;
+            right: 1em;
+            top: 10px;
+            display: inline-block;
+            line-height: 2.5;
+            font-family: Material Design Icons;
+            font-size: 0.65rem;
+          }
+          &:after {
+            content: "\F045";
+            position: absolute;
+            top: 10px;
+            right: 0;
+            display: inline-block;
+            line-height: 2.5;
+            font-family: Material Design Icons;
+            font-size: 0.65rem;
+          }
+        }
+
+        > [aria-sort="descending"] {
+          background: transparent;
+          &:before {
+            content: "\F05D";
+            position: absolute;
+            right: 1em;
+            top: 10px;
+            display: inline-block;
+            line-height: 2.5;
+            font-family: Material Design Icons;
+            font-size: 0.65rem;
+          }
+          &:after {
+            content: "\F045";
+            position: absolute;
+            top: 10px;
+            right: 0;
+            display: inline-block;
+            line-height: 2.5;
+            font-family: Material Design Icons;
+            font-size: 0.65rem;
+          }
+        }
+      }
+    }
+  }
+}
+.table {
+  &.b-table {
+    > tfoot {
+      > tr {
+        th {
+          position: relative;
+          &:focus {
+            outline: none;
+            box-shadow: none;
+          }
+        }
+        > [aria-sort="none"] {
+          background: transparent;
+          &:before {
+            content: "\F05D";
+            position: absolute;
+            right: 1em;
+            top: 10px;
+            display: inline-block;
+            line-height: 2.5;
+            font-family: Material Design Icons;
+            font-size: 0.65rem;
+          }
+          &:after {
+            content: "\F045";
+            position: absolute;
+            top: 10px;
+            right: 0;
+            display: inline-block;
+            line-height: 2.5;
+            font-family: Material Design Icons;
+            font-size: 0.65rem;
+          }
+        }
+        > [aria-sort="ascending"] {
+          background: transparent;
+          &:before {
+            content: "\F05D";
+            position: absolute;
+            right: 1em;
+            top: 10px;
+            display: inline-block;
+            line-height: 2.5;
+            font-family: Material Design Icons;
+            font-size: 0.65rem;
+          }
+          &:after {
+            content: "\F045";
+            position: absolute;
+            top: 10px;
+            right: 0;
+            display: inline-block;
+            line-height: 2.5;
+            font-family: Material Design Icons;
+            font-size: 0.65rem;
+          }
+        }
+        > [aria-sort="descending"] {
+          background: transparent;
+          &:before {
+            content: "\F05D";
+            position: absolute;
+            right: 1em;
+            top: 10px;
+            display: inline-block;
+            line-height: 2.5;
+            font-family: Material Design Icons;
+            font-size: 0.65rem;
+          }
+          &:after {
+            content: "\F045";
+            position: absolute;
+            top: 10px;
+            right: 0;
+            display: inline-block;
+            line-height: 2.5;
+            font-family: Material Design Icons;
+            font-size: 0.65rem;
+          }
+        }
+      }
+    }
+  }
+}

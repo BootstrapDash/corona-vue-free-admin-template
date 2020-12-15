@@ -1,0 +1,163 @@
+/* Miscellanoeous */
+body,
+html {
+  overflow-x: hidden;
+  padding-right: 0 !important; // resets padding right added by Bootstrap modal
+}
+
+*:-moz-full-screen,
+*:-webkit-full-screen,
+*:fullscreen *:-ms-fullscreen {
+  overflow: auto;
+}
+
+.page-body-wrapper {
+  min-height: calc(100vh - #{$navbar-height});
+  width: calc(100% - #{$sidebar-width-lg});
+  @include display-flex();
+  @include flex-direction(row);
+  padding-left: 0;
+  padding-right: 0;
+  transition: all $action-transition-duration $action-transition-timing-function;
+  -webkit-transition: all $action-transition-duration $action-transition-timing-function;
+  -moz-transition: all $action-transition-duration $action-transition-timing-function;
+  -ms-transition: all $action-transition-duration $action-transition-timing-function;
+
+  &.full-page-wrapper {
+    width: 100%;
+    min-height: 100vh;
+  }
+  @media (max-width:992px) {
+    width: 100%;
+  }
+}
+
+.main-panel {
+  transition: width $action-transition-duration $action-transition-timing-function, margin $action-transition-duration $action-transition-timing-function;
+  width: 100%;
+  min-height: calc(100vh - #{$navbar-height});
+  padding-top: $navbar-height;
+  @include display-flex();
+  @include flex-direction(column);
+
+  @media (max-width: 991px) {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+.content-wrapper {
+  background: $content-bg;
+  padding: 2.75rem 2.25rem;
+  width: 100%;
+  @include flex-grow(1);
+}
+
+.container-scroller {
+  overflow: hidden;
+  display: flex;
+  position: relative;
+}
+
+pre {
+  background: color(gray-lighter);
+  padding: 15px;
+  font-size: 14px;
+}
+
+code {
+  padding: 5px;
+  color: theme-color(danger);
+  font-family: $type1-light;
+  font-size: $default-font-size;
+  border-radius: 4px;
+}
+
+.page-header {
+  @extend .d-flex;
+  @extend .justify-content-between;
+  @extend .align-items-center;
+  margin: 0 0 1.5rem 0;
+
+  .breadcrumb {
+    border: 0;
+    margin-bottom: 0;
+  }
+}
+
+.page-title {
+  color: $white;
+  font-size: 1.125rem;
+  margin-bottom: 0;
+
+  .page-title-icon {
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    border-radius: 4px;
+    text-align: center;
+    box-shadow: 0px 3px 8.3px 0.7px rgba(163, 93, 255, 0.35);
+
+    i {
+      font-size: .9375rem;
+      line-height: 36px;
+    }
+  }
+}
+.proBanner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  .purchase-popup {
+      @extend .grid-margin;
+      background: #000;
+      color: #fff;
+      padding: 15px 20px;
+      height: $navbar-height;
+      @include border-radius(3px);
+
+      .btn {
+      margin-right: 20px;
+      font-weight: 500;
+      color: $white;
+      @include border-radius(5px);
+      @include transition-duration(0.2s);
+
+      &.download-button {
+          background: rgba(249, 249, 249, 0.7);
+          color: #969292;
+          border: 1px solid darken(#e4e4e4,5%);
+      }
+      }
+
+      p {
+      margin-bottom: auto;
+      margin-top: auto;
+      color: darken(#e4e4e4,20%);
+      font-weight: 400;
+      vertical-align: middle;
+      line-height: 1;
+      }
+
+      i {
+      vertical-align: middle;
+      line-height: 1;
+      margin: auto 0;
+      color: darken(#e4e4e4,20%);
+      }
+      .bannerClose {
+      cursor: pointer;
+      }
+  }
+  &.hide {
+      display: none;
+  }
+
+}
+.pro-banner-collapse {
+  .proBanner {
+      display: none;
+  }
+}

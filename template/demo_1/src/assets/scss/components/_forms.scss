@@ -1,0 +1,96 @@
+/* Forms */
+
+.input-group-append,
+.input-group-prepend {
+  color: $input-placeholder-color;
+  width: auto;
+  border: none;
+  .input-group-text {
+    background: transparent;
+    border-color: $border-color;
+  }
+}
+
+.form-control {
+  border: 1px solid $border-color;
+  height: calc(2.25rem + 2px);
+  font-size: $input-font-size;
+  padding: 0.625rem 0.6875rem;
+  line-height: 14px;
+  font-weight: normal;
+  background-color: $input-bg;
+  border-radius: 4px;
+  color: #ffffff;
+  &.form-control-lg {
+    padding: $input-btn-padding-y-lg .75rem;
+  }
+  &.form-control-sm {
+    padding: $input-btn-padding-y-sm .75rem;
+  }
+}
+
+select {
+  &.form-control {
+    padding: 0.4375rem 0.75rem;
+  }
+}
+
+.form-group {
+  label {
+    font-size: $default-font-size;
+    line-height: 1;
+    vertical-align: top;
+  }
+  &.has-danger {
+    .form-control {
+      border-color: theme-color(danger);
+    }
+  }
+  .file-upload-default {
+    visibility: hidden;
+    position: absolute;
+  }
+  .file-upload-info {
+    background: transparent;
+  }
+}
+
+.custom-file-label {
+  background: $content-bg;
+}
+
+.custom-select {
+  background: $input-bg url("assets/images/select-arrow.svg") right;
+  background-size: 24px 24px;
+  background-repeat: no-repeat;
+  border: $input-border-width solid $input-border-color;
+  color: $white;
+  min-height: 44px;
+}
+ .custom-control {
+   display: flex;
+   align-items: center;
+ }
+ .custom-control-label {
+   &:before {
+     top: 0;
+   }
+   &:after {
+    top: 0;
+  }
+ }
+
+ .navbar {
+  .form-control {
+    border: none;
+    width: 80%;
+    &:focus {
+      border: none;
+    }
+  }
+}
+
+.form-check {
+  min-height: 18px;
+  padding-left: 1.25rem;
+}
